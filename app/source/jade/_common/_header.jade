@@ -1,0 +1,14 @@
+.container
+    header.header
+        .container-logo
+            img(src="images/logo.png", alt="").logo
+        .container-search Search
+            .search__icon
+        nav.navigation-container
+            mixin nav(active)
+                - var menu = ['Home', 'Portfolio', 'About', 'Contact', 'Blog']
+                ul.navigation__list
+                    each item in menu
+                        li(href="#" class="navigation__item" + (active == item ? ' navigation__item_active' : ''))
+                            a(href="#").navigation__link= item
+            mixin nav('Home')

@@ -1,0 +1,250 @@
+.navigation__list, .owl-pagination {
+  letter-spacing: -0.3em;
+}
+
+.navigation__item, .search__icon, .owl-page {
+  display: inline-block;
+  letter-spacing: normal;
+  vertical-align: top;
+}
+
+.container:before, .owl-controls:before, .container:after, .owl-controls:after {
+  content: "";
+  display: table;
+}
+.container:after, .owl-controls:after {
+  clear: both;
+}
+
+h1, h2, h3 {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+input {
+  outline: none;
+  border: none;
+}
+
+html, body {
+  height: 100%;
+}
+
+.wrapper {
+  display: table;
+  table-layout: fixed;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.content {
+  display: table-row;
+  height: 100%;
+  overflow: hidden;
+}
+
+.container {
+  padding: 0 20px;
+  max-width: 920px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.header {
+  overflow: hidden;
+  width: 100%;
+}
+
+.container-logo {
+  padding: 32px 0 0 2%;
+  width: 136px;
+  height: 21px;
+  float: left;
+}
+
+.logo {
+  width: 100%;
+}
+
+.navigation-container {
+  float: right;
+  width: 52.9%;
+}
+
+.navigation__list {
+  width: 100%;
+  margin: 0 0 0 -2%;
+}
+
+.navigation__item {
+  padding: 29px 0 15px;
+  margin: 0 0 0 2%;
+}
+
+.navigation__link {
+  display: block;
+  color: #515862;
+  padding: 5px 19px;
+  border-radius: 3px;
+}
+.navigation__link:hover {
+  background: #f98561;
+  color: #fff;
+}
+
+.navigation__item_active {
+  background: #12a3d6;
+  font: 700 14px "Ubuntu";
+  border-bottom: 11px solid #0080b7;
+  position: relative;
+}
+.navigation__item_active:before {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin: 0 0 0 -6px;
+  content: '';
+  width: 0;
+  height: 0;
+  border-bottom: 7px solid #0080b7;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+}
+.navigation__item_active .navigation__link {
+  color: #fff;
+}
+.navigation__item_active .navigation__link:hover {
+  background: none;
+}
+
+.container-search {
+  float: right;
+  padding: 22px 0 0;
+  cursor: pointer;
+  font: 400 12px/39px "Ubuntu";
+  color: #515862;
+  margin: 0 0 0 1%;
+}
+
+.search__icon {
+  width: 36px;
+  height: 36px;
+  background: #f98561;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  margin: 0 0 0 7px;
+}
+.search__icon:before {
+  content: '';
+  position: absolute;
+  top: 7px;
+  left: 10px;
+  width: 12px;
+  height: 12px;
+  background: #81bdd6;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+.search__icon:after {
+  content: '';
+  position: absolute;
+  top: 23px;
+  left: 6px;
+  width: 7px;
+  height: 4px;
+  background: #fff;
+  transform: rotate(140deg);
+  border-radius: 0 3px 3px 0;
+}
+
+.slider__item {
+  display: block;
+  overflow: hidden;
+  max-height: 491px;
+}
+
+.slider__img {
+  width: 100%;
+  height: auto;
+}
+
+.owl-controls {
+  padding: 0 20px;
+  max-width: 920px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.owl-pagination {
+  position: absolute;
+  right: 20px;
+  bottom: 28px;
+  z-index: 10;
+}
+
+.owl-page {
+  width: 17px;
+  height: 17px;
+  background: #adadad;
+  border-radius: 50%;
+  margin: 0 0 0 4px;
+}
+
+.active {
+  background: #2190c1;
+  box-shadow: inset 0 0 0 4px #f98561;
+}
+
+.slider__block-text {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  color: #cccece;
+  width: 100%;
+  text-align: center;
+}
+
+.slider__title {
+  font: 60px 'bebas_neueregular';
+  text-transform: uppercase;
+  margin: 0 0 25px;
+}
+
+.slider__text {
+  font: 400 14px "Ubuntu";
+  margin: 0 0 45px;
+}
+
+.slider__button {
+  display: block;
+  font: 25px "Ubuntu Condensed";
+  padding: 10px 0;
+  width: 240px;
+  text-align: center;
+  color: #ffebca;
+  background: #f98561;
+  margin: 0 auto;
+  border-radius: 4px;
+}

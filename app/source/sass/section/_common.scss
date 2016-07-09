@@ -35,6 +35,12 @@
     }
 }
 
+$color:#515862;
+
+$font-ubuntu:'Ubuntu';
+
+$ubuntu-condensed:'Ubuntu Condensed';
+
 h1, h2, h3{
     margin: 0;
     padding: 0;
@@ -66,7 +72,6 @@ html, body {
     height: 100%;
 }
 
-
 .wrapper{
     display: table;
     table-layout: fixed;
@@ -83,7 +88,7 @@ html, body {
 
 .container{
     padding: 0 20px;
-    max-width: 1210px;
+    max-width: 920px;
     margin: 0 auto;
     box-sizing: border-box;
     @extend %clearfix;

@@ -1,0 +1,78 @@
+.slider__list{
+    
+}
+
+.slider__item{
+    display: block;
+    overflow: hidden;
+    max-height: 491px;
+}
+
+.slider__img{
+    width: 100%;
+    height: auto;
+}
+
+.owl-controls{
+    padding: 0 20px;
+    max-width: 920px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    @extend %clearfix;
+    position: relative;
+}
+
+.owl-pagination{
+    position: absolute;
+    right: 20px;
+    bottom: 28px;
+    z-index: 10;
+    @extend %letter-spacing;
+}
+
+.owl-page{
+    width: 17px;
+    height: 17px;
+    background: #adadad;
+    border-radius: 50%;
+    margin: 0 0 0 4px;
+    @extend %inline-block;
+}
+
+.active{
+    background: #2190c1;
+    box-shadow: inset 0 0 0 4px #f98561;
+}
+
+.slider__block-text{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    color: #cccece;
+    width: 100%;
+    text-align: center;
+}
+
+.slider__title{
+    font: 60px 'bebas_neueregular';
+    text-transform: uppercase;
+    margin: 0 0 25px;
+}
+
+.slider__text{
+    font: 400 14px $font-ubuntu;
+    margin: 0 0 45px;
+}
+
+.slider__button{
+    display: block;
+    font: 25px $ubuntu-condensed;
+    padding: 10px 0;
+    width: 240px;
+    text-align: center;
+    color: #ffebca;
+    background: #f98561;
+    margin: 0 auto;
+    border-radius: 4px;
+}
