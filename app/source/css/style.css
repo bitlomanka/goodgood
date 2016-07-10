@@ -1,18 +1,18 @@
-.navigation__list, .owl-pagination {
+.navigation__list, .owl-pagination, .services-list, .portfolio-list {
   letter-spacing: -0.3em;
 }
 
-.navigation__item, .search__icon, .owl-page {
+.navigation__item, .search__icon, .owl-page, .services__item, .portfolio__item {
   display: inline-block;
   letter-spacing: normal;
   vertical-align: top;
 }
 
-.container:before, .owl-controls:before, .container:after, .owl-controls:after {
+.container:before, .clearfix:before, .owl-controls:before, .container:after, .clearfix:after, .owl-controls:after {
   content: "";
   display: table;
 }
-.container:after, .owl-controls:after {
+.container:after, .clearfix:after, .owl-controls:after {
   clear: both;
 }
 
@@ -45,6 +45,7 @@ input {
 
 html, body {
   height: 100%;
+  background: #f4f4f4;
 }
 
 .wrapper {
@@ -63,7 +64,7 @@ html, body {
 
 .container {
   padding: 0 20px;
-  max-width: 920px;
+  max-width: 960px;
   margin: 0 auto;
   box-sizing: border-box;
   position: relative;
@@ -247,4 +248,209 @@ html, body {
   background: #f98561;
   margin: 0 auto;
   border-radius: 4px;
+}
+
+.services-title {
+  text-transform: uppercase;
+  color: #fff;
+  font: 22px "bebas_neueregular";
+  background: #2190c1;
+  width: 145px;
+  margin: -18px auto 33px auto;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 3px;
+}
+
+.services-list {
+  margin: 0 0 0 -8%;
+}
+
+.services__item {
+  width: 17%;
+  margin: 0 0 30px 8%;
+  overflow: hidden;
+  color: #515862;
+}
+
+.services__icon {
+  width: 118px;
+  height: 118px;
+  overflow: hidden;
+  margin: 0 auto 22px auto;
+  border-radius: 50%;
+}
+
+.services-icon-sprite, .services__icon_1, .services__icon_2, .services__icon_3, .services__icon_4 {
+  background-image: url('../images/services-icon-s0f81c5d800.png');
+  background-repeat: no-repeat;
+}
+
+.services__icon_1 {
+  background-position: 0 0;
+}
+
+.services__icon_2 {
+  background-position: 0 -118px;
+}
+
+.services__icon_3 {
+  background-position: 0 -236px;
+}
+
+.services__icon_4 {
+  background-position: 0 -354px;
+}
+
+.services__item-title {
+  margin: 0 0 6px;
+  font: 400 17px "Bree Serif";
+  text-align: center;
+}
+
+.services__text {
+  font: 11px/15px "Ubuntu";
+  word-wrap: break-word;
+  text-align: center;
+}
+
+.services__link {
+  color: #3e9dd1;
+}
+
+.portfolio-section {
+  background: #2e3e4f;
+  padding: 46px 0 0 0;
+}
+.portfolio-section .clearfix {
+  margin: 0 0 64px;
+}
+
+.portfolio-section__title {
+  font: 400 30px "Bree Serif";
+  color: #f98561;
+  float: left;
+}
+
+.portfolio-section__button {
+  color: #fff;
+  background: #2190c1;
+  padding: 10px 12px;
+  border-radius: 3px;
+  float: right;
+}
+
+.portfolio-list {
+  margin: 0 0 0 -4%;
+  overflow: hidden;
+}
+
+.portfolio__item {
+  width: 29.33333%;
+  margin: 0 0 78px 4%;
+  overflow: hidden;
+}
+
+.portfolio__link {
+  width: 100%;
+  box-sizing: border-box;
+  display: block;
+  border: 10px solid #ffffff;
+  margin: 0 0 15px;
+  position: relative;
+  height: auto;
+}
+
+.portfolio__container-img {
+  padding: 76.3% 0 0 0;
+}
+
+.portfolio__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+
+.portfolio__title {
+  margin: 0 0 10px;
+  font: 400 17px "Bree Serif";
+  color: #f98561;
+}
+
+.portfolio__description {
+  color: #bcbcbc;
+  font: 400 11px "Ubuntu";
+}
+
+.services__title_type-2 {
+  font: 400 40px "bebas_neueregular";
+  color: #2190c1;
+  text-align: center;
+  margin: 30px 0 15px;
+}
+
+.services__description {
+  font: 400 12px "Ubuntu";
+  color: #515862;
+  text-align: center;
+  margin: 0 0 40px;
+}
+
+.services-list_type-2 {
+  margin: 0 0 30px -4.9%;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.services__item_type-2 {
+  width: 20.1%;
+  margin: 0 0 25px 4.9%;
+}
+
+.services__item-title_blue {
+  color: #2190c1;
+  text-align: left;
+}
+
+.services__text_align-left {
+  text-align: left;
+}
+
+.services__link_type-2, .services__link_type-4 {
+  display: block;
+  float: right;
+  background: #2190c1;
+  color: #fff;
+  margin: 10px 0;
+  border-radius: 4px;
+  padding: 5px 7px;
+}
+
+.services__link_type-3 {
+  font: 14px "Bree Serif";
+}
+
+.services__link_type-4 {
+  border-bottom: 3px solid #025568;
+}
+
+.services__link_type-5:after {
+  content: '>>>';
+  color: #2190c1;
+  font-size: 14px;
+}
+
+.services__title_type-3 {
+  font-size: 27px;
+  margin-bottom: 30px;
+}
+
+.services__description_type-2 {
+  font-size: 25px;
+}
+
+.footer {
+  background: #2e3e4f;
+  padding: 43px 0 32px;
 }

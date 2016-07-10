@@ -1,0 +1,70 @@
+.portfolio-section{
+    background: $bg-2;
+    padding: 46px 0 0 0;
+    .clearfix{
+        margin: 0 0 64px;
+    }
+}
+
+.portfolio-section__title{
+    font: 400 30px $bree-serif;
+    color: $color-orange;
+    float: left;
+}
+
+.portfolio-section__button{
+    color: #fff;
+    background: $blue;
+    padding: 10px 12px;
+    border-radius: 3px;
+    float: right;
+}
+
+.portfolio-list{
+    margin: 0 0 0 -4%;
+    @extend %letter-spacing;
+    overflow: hidden;
+}
+
+.portfolio__item{
+    @extend %inline-block;
+    width: getColumnWidth(100%, 3, 4%);
+    margin: 0 0 78px 4%;
+    overflow: hidden;
+}
+
+.portfolio__link{
+    width: 100%;
+    box-sizing: border-box;
+    display: block;
+    border: 10px solid #ffffff;
+    margin: 0 0 15px;
+    position: relative;
+    height: auto;
+}
+
+.portfolio__container-img{
+    padding: 76.3% 0 0 0;
+}
+
+.portfolio__img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+
+.portfolio__title{
+    margin: 0 0 10px;
+    font: 400 17px $bree-serif;
+    color: $color-orange;
+}
+
+.portfolio__description{
+    color: #bcbcbc;
+    font: 400 11px $font-ubuntu;
+}
+
+
+

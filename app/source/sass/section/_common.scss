@@ -4,6 +4,11 @@
   }
 }
 
+@function getColumnWidth($width, $columns,$margin){
+    @return ($width / $columns) - $margin;
+//    @return (100% / 4) - (10%);
+}
+
 %letter-spacing{
     letter-spacing: -0.3em;
 }
@@ -37,9 +42,19 @@
 
 $color:#515862;
 
+$color-orange: #f98561;
+
 $font-ubuntu:'Ubuntu';
 
 $ubuntu-condensed:'Ubuntu Condensed';
+
+$bree-serif: 'Bree Serif';
+
+$bg-2:#2e3e4f;
+
+$blue:#2190c1;
+
+$bebas_neueregular:'bebas_neueregular';
 
 h1, h2, h3{
     margin: 0;
@@ -70,6 +85,7 @@ input{
 
 html, body {
     height: 100%;
+    background: #f4f4f4;
 }
 
 .wrapper{
@@ -88,11 +104,15 @@ html, body {
 
 .container{
     padding: 0 20px;
-    max-width: 920px;
+    max-width: 960px;
     margin: 0 auto;
     box-sizing: border-box;
     @extend %clearfix;
     position: relative;
+}
+
+.clearfix{
+    @extend %clearfix;
 }
 
 

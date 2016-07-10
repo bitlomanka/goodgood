@@ -1,0 +1,68 @@
+.services-title{
+    text-transform: uppercase;
+    color: #fff;
+    font: 22px $bebas_neueregular;
+    background: $blue;
+    width: 145px;
+    margin: -18px auto 33px auto;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 3px;
+}
+
+.services-list{
+    @extend %letter-spacing;
+    margin: 0 0 0 -8%;
+}
+
+.services__item{
+    @extend %inline-block;
+    width: getColumnWidth(100%, 4, 8%);
+    margin: 0 0 30px 8%;
+    overflow: hidden;
+    color: $color;
+}
+
+.services__icon{
+    width: 118px;
+    height: 118px;
+    overflow: hidden;
+    margin: 0 auto 22px auto;
+    border-radius: 50%;
+}
+
+$contact-spacing: 20px;
+
+@import "services-icon/*.png";
+
+.services__icon_1{
+    @include services-icon-sprite(services-icon-1)
+}
+
+.services__icon_2{
+    @include services-icon-sprite(services-icon-2)
+}
+
+.services__icon_3{
+    @include services-icon-sprite(services-icon-3)
+}
+
+.services__icon_4{
+    @include services-icon-sprite(services-icon-4)
+}
+
+.services__item-title{
+    margin: 0 0 6px;
+    font: 400 17px $bree-serif;
+    text-align: center;
+}
+
+.services__text{
+    font: 11px/15px $font-ubuntu;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+.services__link{
+    color: #3e9dd1;
+}
