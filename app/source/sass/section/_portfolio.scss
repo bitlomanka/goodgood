@@ -10,6 +10,10 @@
     font: 400 30px $bree-serif;
     color: $color-orange;
     float: left;
+    @include media("max-width: 480px") {
+        float: none;
+        margin: 15px;
+    }
 }
 
 .portfolio-section__button{
@@ -17,7 +21,11 @@
     background: $blue;
     padding: 10px 12px;
     border-radius: 3px;
+    text-align: center;
     float: right;
+    @include media("max-width: 480px") {
+        float: none;
+    }
 }
 
 .portfolio-list{
@@ -31,6 +39,12 @@
     width: getColumnWidth(100%, 3, 4%);
     margin: 0 0 78px 4%;
     overflow: hidden;
+    @include media("max-width: 960px") {
+        margin-bottom: 50px;
+    }
+    @include media("max-width: 480px") {
+        width: getColumnWidth(100%, 1, 4%);
+    }
 }
 
 .portfolio__link{
@@ -59,11 +73,17 @@
     margin: 0 0 10px;
     font: 400 17px $bree-serif;
     color: $color-orange;
+    @include media("max-width: 960px") {
+        font-size: 18px;
+    }
 }
 
 .portfolio__description{
     color: #bcbcbc;
     font: 400 11px $font-ubuntu;
+    @include media("max-width: 960px") {
+        font-size: 14px;
+    }
 }
 
 

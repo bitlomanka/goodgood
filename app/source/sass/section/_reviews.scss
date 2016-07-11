@@ -1,0 +1,91 @@
+.services__title_reviews{
+    font-size: 27px;
+    margin-bottom: 30px;
+}
+
+.reviews-list{
+
+}
+
+.reviews__item{
+    display: none;
+    &.reviews_active{
+        display: block;
+    }
+}
+
+.reviews__item_font-size{
+    font-size: 25px;
+    margin: 0 0 12px;
+    min-height: 100px;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+.reviews-name{
+    text-align: center;
+    color: $color-orange;
+    font: 400 14px $font-ubuntu;
+    margin: 0 0 30px;
+}
+
+.reviews-avatar-list{
+    @extend %letter-spacing;
+    text-align: center;
+    margin: 0 0 15px;
+}
+
+.reviews-avatar__item{
+    @extend %inline-block;
+    margin: 0 0 0 4px;
+    position: relative;
+        &:before{
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 0;
+            height: 0;
+            width: 67px;
+            border-bottom: 3px solid #c1c1c1;
+    }
+    &.reviews_active{
+        &:before{
+        border-color: #f98561;
+        }
+        &:after{
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 50%;
+            margin: 0 0 0 -6px;
+            content: '';
+            width: 0;
+            height: 0;
+            border-bottom: 7px solid #f98561;
+            border-left: 7px solid transparent;
+            border-right: 7px solid transparent;
+        }
+    }
+}
+
+.reviews-avatar__item_active{
+    
+}
+
+.reviews__link{
+    display: block;
+    width: 67px;
+    height: 67px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+@import "ava-icons/*.png";
+
+.reviews-avatar__bg-1{
+    @include ava-icons-sprite(ava-1)
+}
+
+.reviews-avatar__bg-2{
+    @include ava-icons-sprite(ava-2)
+}

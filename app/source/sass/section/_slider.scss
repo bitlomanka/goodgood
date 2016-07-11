@@ -1,5 +1,7 @@
-.slider__list{
-    
+.slider-container{
+    @include media("max-width: 420px") {
+        display: none;
+    }
 }
 
 .slider__item{
@@ -26,7 +28,7 @@
     position: absolute;
     right: 20px;
     bottom: 28px;
-    z-index: 10;
+    z-index: 3;
     @extend %letter-spacing;
 }
 
@@ -58,11 +60,26 @@
     font: 60px 'bebas_neueregular';
     text-transform: uppercase;
     margin: 0 0 25px;
+    @include media("max-width: 960px") {
+        font-size: 45px;
+        margin: 0 0 15px;
+    }
+    @include media("max-width: 700px") {
+        font-size: 27px;
+        margin: 0 0 10px;
+    }
 }
 
 .slider__text{
     font: 400 14px $font-ubuntu;
     margin: 0 0 45px;
+    @include media("max-width: 960px") {
+        font-size: 16px;
+        margin: 0 0 15px;
+    }
+    @include media("max-width: 700px") {
+        font-size: 14px;
+    }
 }
 
 .slider__button{
@@ -75,4 +92,13 @@
     background: #f98561;
     margin: 0 auto;
     border-radius: 4px;
+    @include media("max-width: 960px") {
+        font-size: 20px;
+        width: 165px;
+        padding: 5px;
+    }
+    @include media("max-width: 960px") {
+        font-size: 16px;
+        width: 120px;
+    }
 }

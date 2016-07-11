@@ -1,8 +1,8 @@
-.navigation__list, .owl-pagination, .services-list, .portfolio-list {
+.header, .navigation__list, .owl-pagination, .services-list, .portfolio-list, .reviews-avatar-list, .footer-list {
   letter-spacing: -0.3em;
 }
 
-.navigation__item, .search__icon, .owl-page, .services__item, .portfolio__item {
+.container-logo, .mobile-navigation, .navigation-container, .navigation__item, .container-search, .search__icon, .owl-page, .services__item, .portfolio__item, .reviews-avatar__item, .footer__item {
   display: inline-block;
   letter-spacing: normal;
   vertical-align: top;
@@ -71,34 +71,125 @@ html, body {
 }
 
 .header {
-  overflow: hidden;
   width: 100%;
+}
+@media only screen and (max-width: 480px) {
+  .header {
+    border-bottom: 1px solid #d9d9d9;
+    padding-bottom: 10px;
+    margin-bottom: 40px;
+  }
 }
 
 .container-logo {
   padding: 32px 0 0 2%;
   width: 136px;
   height: 21px;
-  float: left;
 }
 
 .logo {
   width: 100%;
 }
 
+.mobile-navigation {
+  display: none;
+  width: 40px;
+  height: 30px;
+  margin: 10px 0;
+  overflow: hidden;
+  background: url(../images/mobile-navigation.png) no-repeat center;
+}
+@media only screen and (max-width: 700px) {
+  .mobile-navigation {
+    display: block;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .mobile-navigation {
+    float: right;
+  }
+}
+
 .navigation-container {
-  float: right;
   width: 52.9%;
+  margin: 0 0 0 20%;
+  position: relative;
+}
+@media only screen and (max-width: 960px) {
+  .navigation-container {
+    width: 64%;
+    margin: 0 0 0 1%;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .navigation-container {
+    margin: 13px 9% 0;
+    width: 30%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .navigation-container {
+    margin: 13px 0;
+    width: 49%;
+  }
 }
 
 .navigation__list {
   width: 100%;
   margin: 0 0 0 -2%;
+  display: block;
+}
+.navigation__list:before {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border-bottom: 7px solid #2e3e4f;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  position: absolute;
+  top: -7px;
+}
+@media only screen and (max-width: 960px) {
+  .navigation__list {
+    margin: 0;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .navigation__list {
+    margin: 0;
+    display: none;
+    background: #2e3e4f;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    z-index: 4;
+  }
+  .navigation__list:before {
+    left: 7px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .navigation__list:before {
+    left: auto;
+    right: 7px;
+  }
 }
 
 .navigation__item {
   padding: 29px 0 15px;
   margin: 0 0 0 2%;
+}
+@media only screen and (max-width: 960px) {
+  .navigation__item {
+    margin: 0;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .navigation__item {
+    display: block;
+    padding: 5px 0;
+  }
 }
 
 .navigation__link {
@@ -110,6 +201,11 @@ html, body {
 .navigation__link:hover {
   background: #f98561;
   color: #fff;
+}
+@media only screen and (max-width: 700px) {
+  .navigation__link {
+    color: #fff;
+  }
 }
 
 .navigation__item_active {
@@ -130,6 +226,11 @@ html, body {
   border-left: 7px solid transparent;
   border-right: 7px solid transparent;
 }
+@media only screen and (max-width: 700px) {
+  .navigation__item_active:before {
+    display: none;
+  }
+}
 .navigation__item_active .navigation__link {
   color: #fff;
 }
@@ -138,12 +239,23 @@ html, body {
 }
 
 .container-search {
-  float: right;
   padding: 22px 0 0;
   cursor: pointer;
   font: 400 12px/39px "Ubuntu";
   color: #515862;
   margin: 0 0 0 1%;
+}
+@media only screen and (max-width: 960px) {
+  .container-search {
+    margin: 0;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .container-search {
+    display: block;
+    text-align: center;
+    padding: 0;
+  }
 }
 
 .search__icon {
@@ -178,6 +290,12 @@ html, body {
   border-radius: 0 3px 3px 0;
 }
 
+@media only screen and (max-width: 420px) {
+  .slider-container {
+    display: none;
+  }
+}
+
 .slider__item {
   display: block;
   overflow: hidden;
@@ -201,7 +319,7 @@ html, body {
   position: absolute;
   right: 20px;
   bottom: 28px;
-  z-index: 10;
+  z-index: 3;
 }
 
 .owl-page {
@@ -232,10 +350,33 @@ html, body {
   text-transform: uppercase;
   margin: 0 0 25px;
 }
+@media only screen and (max-width: 960px) {
+  .slider__title {
+    font-size: 45px;
+    margin: 0 0 15px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .slider__title {
+    font-size: 27px;
+    margin: 0 0 10px;
+  }
+}
 
 .slider__text {
   font: 400 14px "Ubuntu";
   margin: 0 0 45px;
+}
+@media only screen and (max-width: 960px) {
+  .slider__text {
+    font-size: 16px;
+    margin: 0 0 15px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .slider__text {
+    font-size: 14px;
+  }
 }
 
 .slider__button {
@@ -249,6 +390,19 @@ html, body {
   margin: 0 auto;
   border-radius: 4px;
 }
+@media only screen and (max-width: 960px) {
+  .slider__button {
+    font-size: 20px;
+    width: 165px;
+    padding: 5px;
+  }
+}
+@media only screen and (max-width: 960px) {
+  .slider__button {
+    font-size: 16px;
+    width: 120px;
+  }
+}
 
 .services-title {
   text-transform: uppercase;
@@ -261,6 +415,17 @@ html, body {
   padding: 5px 0;
   border-radius: 3px;
 }
+@media only screen and (max-width: 700px) {
+  .services-title {
+    font-size: 18px;
+    margin-top: 30px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .services-title {
+    font-size: 20px;
+  }
+}
 
 .services-list {
   margin: 0 0 0 -8%;
@@ -271,6 +436,11 @@ html, body {
   margin: 0 0 30px 8%;
   overflow: hidden;
   color: #515862;
+}
+@media only screen and (max-width: 960px) {
+  .services__item {
+    width: 42%;
+  }
 }
 
 .services__icon {
@@ -307,11 +477,31 @@ html, body {
   font: 400 17px "Bree Serif";
   text-align: center;
 }
+@media only screen and (max-width: 960px) {
+  .services__item-title {
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .services__item-title {
+    text-align: left;
+  }
+}
 
 .services__text {
   font: 11px/15px "Ubuntu";
   word-wrap: break-word;
   text-align: center;
+}
+@media only screen and (max-width: 960px) {
+  .services__text {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .services__text {
+    text-align: left;
+  }
 }
 
 .services__link {
@@ -331,13 +521,25 @@ html, body {
   color: #f98561;
   float: left;
 }
+@media only screen and (max-width: 480px) {
+  .portfolio-section__title {
+    float: none;
+    margin: 15px;
+  }
+}
 
 .portfolio-section__button {
   color: #fff;
   background: #2190c1;
   padding: 10px 12px;
   border-radius: 3px;
+  text-align: center;
   float: right;
+}
+@media only screen and (max-width: 480px) {
+  .portfolio-section__button {
+    float: none;
+  }
 }
 
 .portfolio-list {
@@ -349,6 +551,16 @@ html, body {
   width: 29.33333%;
   margin: 0 0 78px 4%;
   overflow: hidden;
+}
+@media only screen and (max-width: 960px) {
+  .portfolio__item {
+    margin-bottom: 50px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .portfolio__item {
+    width: 96%;
+  }
 }
 
 .portfolio__link {
@@ -378,10 +590,20 @@ html, body {
   font: 400 17px "Bree Serif";
   color: #f98561;
 }
+@media only screen and (max-width: 960px) {
+  .portfolio__title {
+    font-size: 18px;
+  }
+}
 
 .portfolio__description {
   color: #bcbcbc;
   font: 400 11px "Ubuntu";
+}
+@media only screen and (max-width: 960px) {
+  .portfolio__description {
+    font-size: 14px;
+  }
 }
 
 .services__title_type-2 {
@@ -397,15 +619,41 @@ html, body {
   text-align: center;
   margin: 0 0 40px;
 }
+@media only screen and (max-width: 960px) {
+  .services__description {
+    font-size: 17px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .services__description {
+    text-align: left;
+  }
+}
 
 .services-list_type-2 {
   margin: 0 0 30px -4.9%;
   border-bottom: 1px solid #d9d9d9;
 }
+@media only screen and (max-width: 480px) {
+  .services-list_type-2 {
+    margin-left: -4%;
+  }
+}
 
 .services__item_type-2 {
   width: 20.1%;
   margin: 0 0 25px 4.9%;
+}
+@media only screen and (max-width: 960px) {
+  .services__item_type-2 {
+    width: 42%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .services__item_type-2 {
+    width: 96%;
+    margin-left: 4%;
+  }
 }
 
 .services__item-title_blue {
@@ -426,6 +674,12 @@ html, body {
   border-radius: 4px;
   padding: 5px 7px;
 }
+@media only screen and (max-width: 960px) {
+  .services__link_type-2, .services__link_type-4 {
+    float: left;
+    margin: 30px 0 0 0;
+  }
+}
 
 .services__link_type-3 {
   font: 14px "Bree Serif";
@@ -441,16 +695,212 @@ html, body {
   font-size: 14px;
 }
 
-.services__title_type-3 {
+.services__title_reviews {
   font-size: 27px;
   margin-bottom: 30px;
 }
 
-.services__description_type-2 {
+.reviews__item {
+  display: none;
+}
+.reviews__item.reviews_active {
+  display: block;
+}
+
+.reviews__item_font-size {
   font-size: 25px;
+  margin: 0 0 12px;
+  min-height: 100px;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+
+.reviews-name {
+  text-align: center;
+  color: #f98561;
+  font: 400 14px "Ubuntu";
+  margin: 0 0 30px;
+}
+
+.reviews-avatar-list {
+  text-align: center;
+  margin: 0 0 15px;
+}
+
+.reviews-avatar__item {
+  margin: 0 0 0 4px;
+  position: relative;
+}
+.reviews-avatar__item:before {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  height: 0;
+  width: 67px;
+  border-bottom: 3px solid #c1c1c1;
+}
+.reviews-avatar__item.reviews_active:before {
+  border-color: #f98561;
+}
+.reviews-avatar__item.reviews_active:after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  margin: 0 0 0 -6px;
+  content: '';
+  width: 0;
+  height: 0;
+  border-bottom: 7px solid #f98561;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+}
+
+.reviews__link {
+  display: block;
+  width: 67px;
+  height: 67px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.ava-icons-sprite, .reviews-avatar__bg-1, .reviews-avatar__bg-2 {
+  background-image: url('../images/ava-icons-s5e3da431b3.png');
+  background-repeat: no-repeat;
+}
+
+.reviews-avatar__bg-1 {
+  background-position: 0 0;
+}
+
+.reviews-avatar__bg-2 {
+  background-position: 0 -69px;
 }
 
 .footer {
   background: #2e3e4f;
-  padding: 43px 0 32px;
+  padding: 40px 0 32px;
+}
+
+.footer-list {
+  margin: 0 0 0 -3%;
+}
+@media only screen and (max-width: 960px) {
+  .footer-list {
+    margin: 0 0 30px -10%;
+  }
+}
+
+.footer__item {
+  width: 22%;
+  margin: 0 0 30px 3%;
+  overflow: hidden;
+}
+@media only screen and (max-width: 960px) {
+  .footer__item {
+    width: 40%;
+    margin: 0 0 30px 10%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .footer__item {
+    width: 90%;
+  }
+}
+
+.footer__title {
+  color: #f98561;
+  font: 30px "bebas_neueregular";
+  margin: 0 0 7px;
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 960px) {
+  .footer__title {
+    text-align: center;
+  }
+}
+
+.footer__publication-container {
+  font: 400 12px "Ubuntu";
+  padding: 11px 0 12px;
+  border-top: 1px solid #556270;
+  overflow: hidden;
+}
+.footer__publication-container.footer__publication-container_border-none {
+  border: none;
+}
+
+.footer__publication-text {
+  color: #a3afb2;
+  margin: 0 0 5px;
+  display: block;
+  word-wrap: break-word;
+}
+
+.footer__publication-link {
+  display: block;
+  color: #2190c1;
+  margin: 0 0 5px;
+}
+
+.footer__publication-date {
+  color: #a3afb2;
+  margin: 0 0 5px;
+}
+
+.mail__label {
+  display: block;
+  font: 400 13px "Ubuntu";
+  color: #2190c1;
+  margin: 0 0 15px;
+}
+
+.mail__field {
+  width: 100%;
+  border-radius: 4px;
+  padding: 7px;
+  box-sizing: border-box;
+  margin: 0 0 17px;
+}
+
+.footer__publication-container_right {
+  float: right;
+  width: 68%;
+}
+
+.footer__publication-container-img {
+  float: left;
+  width: 56px;
+  height: 56px;
+  overflow: hidden;
+}
+
+.footer__publication-img {
+  width: 100%;
+  height: auto;
+}
+
+.footer__contact-icons {
+  float: left;
+  width: 35px;
+  height: 37px;
+  overflow: hidden;
+}
+
+.footer-icons-sprite, .footer__contact-icons-1, .footer__contact-icons-2, .footer__contact-icons-3 {
+  background-image: url('../images/footer-icons-s219fcd15b9.png');
+  background-repeat: no-repeat;
+}
+
+.footer__contact-icons-1 {
+  background-position: 0 -37px;
+}
+
+.footer__contact-icons-2 {
+  background-position: 0 -74px;
+}
+
+.footer__contact-icons-3 {
+  background-position: 0 0;
 }

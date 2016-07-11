@@ -8,6 +8,13 @@
     text-align: center;
     padding: 5px 0;
     border-radius: 3px;
+    @include media("max-width: 700px") {
+        font-size: 18px;
+        margin-top: 30px;
+    }
+    @include media("max-width: 700px") {
+        font-size: 20px;
+    }
 }
 
 .services-list{
@@ -21,6 +28,9 @@
     margin: 0 0 30px 8%;
     overflow: hidden;
     color: $color;
+    @include media("max-width: 960px") {
+        width: getColumnWidth(100%, 2, 8%);
+    }
 }
 
 .services__icon{
@@ -55,12 +65,24 @@ $contact-spacing: 20px;
     margin: 0 0 6px;
     font: 400 17px $bree-serif;
     text-align: center;
+    @include media("max-width: 960px") {
+        font-size: 18px;
+    }
+    @include media("max-width: 480px") {
+        text-align: left;
+    }
 }
 
 .services__text{
     font: 11px/15px $font-ubuntu;
     word-wrap: break-word;
     text-align: center;
+    @include media("max-width: 960px") {
+        font-size: 16px;
+    }
+    @include media("max-width: 480px") {
+        text-align: left;
+    }
 }
 
 .services__link{

@@ -1,4 +1,123 @@
 .footer{
     background: $bg-2;
-    padding: 43px 0 32px;
+    padding: 40px 0 32px;
+}
+
+.footer-list{
+    @extend %letter-spacing;
+    margin: 0 0 0 -3%;
+    @include media("max-width: 960px") {
+        margin: 0 0 30px -10%;
+    }
+}
+
+.footer__item{
+    @extend %inline-block;
+    width: getColumnWidth(100%, 4, 3%);
+    margin: 0 0 30px 3%;
+    overflow: hidden;
+    @include media("max-width: 960px") {
+        width: getColumnWidth(100%, 2, 10%);
+        margin: 0 0 30px 10%;
+    }
+    @include media("max-width: 480px") {
+        width: getColumnWidth(100%, 1, 10%);
+    }
+}
+
+.footer__title{
+    color: $color-orange;
+    font: 30px $bebas_neueregular;
+    margin: 0 0 7px;
+    text-transform: uppercase;
+    @include media("max-width: 960px") {
+        text-align: center;
+    }
+}
+
+.footer__publication-container{
+    font: 400 12px $font-ubuntu;
+    padding: 11px 0 12px;
+    border-top: 1px solid #556270;
+    overflow: hidden;
+    &.footer__publication-container_border-none{
+        border: none;
+    }
+}
+
+.footer__publication-text{
+    color: #a3afb2;
+    margin: 0 0 5px;
+    display: block;
+    word-wrap: break-word;
+}
+
+.footer__publication-link{
+    display: block;
+    color: $blue;
+    margin: 0 0 5px;
+}
+
+.footer__publication-date{
+    color: #a3afb2;
+    margin: 0 0 5px;
+}
+
+.mail-container{
+    
+}
+
+.mail__label{
+    display: block;
+    font: 400 13px $font-ubuntu;
+    color: $blue;
+    margin: 0 0 15px;
+}
+
+.mail__field{
+    width: 100%;
+    border-radius: 4px;
+    padding: 7px;
+    box-sizing: border-box;
+    margin: 0 0 17px;
+}
+
+.footer__publication-container_right{
+    float: right;
+    width: 68%;
+}
+
+.footer__publication-container-img{
+    float: left;
+    width: 56px;
+    height: 56px;
+    overflow: hidden;
+}
+
+.footer__publication-img{
+    width: 100%;
+    height: auto;
+}
+
+.footer__contact-icons{
+    float: left;
+    width: 35px;
+    height: 37px;
+    overflow: hidden;
+}
+
+$contact-spacing: 10px;
+
+@import "footer-icons/*.png";
+
+.footer__contact-icons-1{
+    @include footer-icons-sprite(phone-1)
+}
+
+.footer__contact-icons-2{
+    @include footer-icons-sprite(phone-2)
+}
+
+.footer__contact-icons-3{
+    @include footer-icons-sprite(mail)
 }
