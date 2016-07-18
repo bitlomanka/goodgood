@@ -11,5 +11,6 @@
                         li(href="#" class="navigation__item" + (active == item ? ' navigation__item_active' : ''))
                             a(href="#").navigation__link= item
             mixin nav('Home')
-        .container-search Search
-            .search__icon
+        form(action="").container-search
+            input(type="search", name="search", placeholder="Search").search__field
+            input(type="submit" value="").search__icon

@@ -37,6 +37,17 @@ $(document).ready(function(){
         }
     });
     
+    // photo hover
+    $('.portfolio__link').hover(function(e){
+        var hoverBlock = $(this).find('.portfolio__hover')
+        
+        if(hoverBlock.is(":hidden")){
+            hoverBlock.fadeIn('1000');
+        }else{
+            hoverBlock.fadeOut('1000');
+        }
+    });
+    
 });
 
 

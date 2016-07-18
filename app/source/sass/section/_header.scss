@@ -9,7 +9,7 @@
 }
 
 .container-logo{
-    padding: 32px 0 0 2%;
+    padding: 32px 0 0 0.8%;
     width: 136px;
     height: 21px;
     @extend %inline-block;
@@ -38,7 +38,7 @@
 .navigation-container{
     @extend %inline-block;
     width: 52.9%;
-    margin: 0 0 0 20%;
+    margin: 0 0 0 18.8%;
     position: relative;
     @include media("max-width: 960px") {
         width: 64%;
@@ -150,11 +150,10 @@
 
 .container-search{
     @extend %inline-block;
+    width: 117px;
     padding: 22px 0 0;
     cursor: pointer;
-    font: 400 12px/39px $font-ubuntu;
-    color: $color;
-    margin: 0 0 0 1%;
+    overflow: hidden;
     @include media("max-width: 960px") {
         margin: 0;
     }
@@ -165,7 +164,29 @@
     }
 }
 
+.search__field{
+    width: 80px;
+    box-sizing: border-box;
+    padding: 0 5px;
+    float: left;
+    font: 400 12px/39px $font-ubuntu;
+    background: none;
+    border: none;
+    color: $color;
+    &::-webkit-input-placeholder{
+        color: $color;
+    }
+    &::-moz-placeholder{
+        color: $color;
+    }
+    &::-ms-input-placeholder{
+        color: $color;
+    }
+    
+}
+
 .search__icon{
+    float: right;
     width: 36px;
     height: 36px;
     background: #f98561;
@@ -173,27 +194,5 @@
     position: relative;
     cursor: pointer;
     @extend %inline-block;
-    margin: 0 0 0 7px;
-    &:before{
-        content: '';
-        position: absolute;
-        top: 7px;
-        left: 10px;
-        width: 12px;
-        height: 12px;
-        background: #81bdd6;
-        border-radius: 50%;
-        border: 3px solid #fff;
-    }
-    &:after{
-        content: '';
-        position: absolute;
-        top: 23px;
-        left: 6px;
-        width: 7px;
-        height: 4px;
-        background: #fff;
-        transform: rotate(140deg);
-        border-radius: 0 3px 3px 0;
-    }
+    background: #f98561 url(../images/search.png) no-repeat center;
 }
