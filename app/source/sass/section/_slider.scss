@@ -57,7 +57,7 @@
 }
 
 .slider__title{
-    font: 60px 'bebas_neueregular';
+    font: 60px $bebas_neueregular;
     text-transform: uppercase;
     margin: 0 0 25px;
     @include media("max-width: 960px") {

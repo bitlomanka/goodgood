@@ -1,0 +1,14 @@
+extends ../main
+block title
+    - var title = 'Contact'
+    | Contact
+block content
+    main.content
+        .background-top
+            .slider__block-text
+                h1.slider__title_page.slider__title CONTACT
+        .container 
+            include ../_common/_contact-top
+            .contact__container
+                include ../_common/_contact-form
+        

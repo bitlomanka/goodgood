@@ -1,0 +1,15 @@
+extends ../main
+block title
+    - var title = 'About'
+    | About
+block content
+    main.content
+        .background-top
+            .slider__block-text
+                h1.slider__title_page.slider__title about us
+        .container 
+            include ../_common/_about-us-top
+            h2.offer-services__title we belive in good design
+        include ../_common/_offer-services
+        .container
+            include ../_common/_team

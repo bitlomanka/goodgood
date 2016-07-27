@@ -1,0 +1,17 @@
+.border
+    .filter-menu__container-width
+        - var filterMenu = ['ALL', 'WEB DESIGN', 'ADVERTISING', 'IDENTITY', 'ILLUSTRATION']
+        ul.filter-menu__list
+            each item in filterMenu
+                li.filter-menu__item
+                    a(href="#").filter-menu__link= item
+        .category__container CATEGORY
+            - var category = ['Lorem', 'Ipsum', 'Dolar', 'Sit Amet', 'Kullar']
+            ul.category__list
+                each item in category
+                    li.category__item
+                        a(href="#").category__link= item
+        .view__container
+            .view.view_1
+            .view.view_2-active
+    

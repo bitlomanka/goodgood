@@ -1,0 +1,91 @@
+.team__list{
+    @extend %letter-spacing;
+    margin: 50px auto 49px -2.7%;
+}
+
+.team__item{
+    @extend %inline-block;
+    width: 40.6%;
+    box-sizing: border-box;
+    padding: 1.5%;
+    border: 1px solid #cccccc;
+    margin: 0 0 55px 7.3%;
+    @include media("max-width: 700px") {
+        width: getColumnWidth(100%, 2, 2.7%);
+        margin-left: 2.7%;
+        text-align: center;
+    }
+    @include media("max-width: 480px") {
+        width: getColumnWidth(100%, 1, 2.7%);
+    }
+}
+
+.team__item_left-shadow{
+    box-shadow: -9px -9px 0 0 #d3d3d3, -10px -10px 0 0 #cccccc;
+}
+
+.team__item_right-shadow{
+    box-shadow: 9px -9px 0 0 #d3d3d3, 10px -10px 0 0 #cccccc;
+}
+
+.team__top-content{
+    width: 100%;
+    @extend %letter-spacing;
+    text-align: center;
+    margin: 0 0 28px;
+}
+
+.team__container-photo{
+    @extend %inline-block;
+    position: relative;
+    width: 36%;
+    padding: 36% 0 0 0;
+    overflow: hidden;
+    @include media("max-width: 700px") {
+        width: 65%;
+        padding: 65% 0 0 0;
+    }
+}
+
+.team__photo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.team__container-data{
+    @extend %inline-block;
+    width: 55%;
+    padding: 7px 0 0 0;
+    margin: 0 0 0 9%;
+    text-align: center;
+    @include media("max-width: 700px") {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+.team__position{
+    font: 400 17px $bree-serif;
+    color: #666;
+    word-wrap: break-word;
+}
+
+.team__name{
+    font: 32px $bebas_neueregular;
+    color: $blue;
+    word-wrap: break-word;
+}
+
+.team__email{
+    font: 400 13px $font-ubuntu;
+    color: #666;
+    word-wrap: break-word;
+}
+
+.team__description{
+    font: 400 12px/19px $font-ubuntu;
+    color: $color;
+    margin: 0 0 13px;
+}

@@ -1,0 +1,103 @@
+.portfolio-list_align-cetner{
+    text-align: center;
+}
+
+.portfolio__item_page{
+    margin-bottom: 20px;
+    text-align: center;
+    @include media("max-width: 700px") {
+        width: getColumnWidth(100%, 2, 4%);
+    }
+    @include media("max-width: 480px") {
+        width: getColumnWidth(100%, 1, 4%);
+    }
+}
+
+.portfolio__title-hover{
+    font: 400 20px $bree-serif;
+    color: #f0f0f0;
+    text-align: center;
+    margin: 0 0 20px;
+    @include media("max-width: 700px") {
+        line-height: 20px;
+        margin: 0 0 10px;
+    }
+}
+
+.portfolio__description-hover{
+    font: 400 11px $font-ubuntu;
+    color: #f0f0f0;
+    margin: 0 0 30px;
+    @include media("max-width: 700px") {
+        margin: 0 0 10px;
+    }
+}
+
+.portfolio__list-page{
+    @extend %letter-spacing;
+    text-align: center;
+    margin: 29px 0 55px;
+}
+
+.portfolio__item-page{
+    @extend %inline-block;
+    margin: 0 0 0 8px;
+}
+
+.portfolio__item-page_next, portfolio__item-page_prev{
+    margin: 0;
+}
+
+.portfolio__link-page{
+    display: block;
+    height: 30px;
+    width: 30px;
+    box-sizing: border-box;
+    background: #aaa;
+    color: #fff;
+    font: 400 20px $ubuntu-condensed;
+    border-radius: 3px;
+    padding: 4px 0 0 0;
+}
+
+.portfolio__link-page_prev, .portfolio__link-page_next{
+    display: block;
+    width: 61px;
+    height: 30px;
+    box-sizing: border-box;
+    color: #fff;
+    padding: 7px 0 0 0;
+    font: 400 15px $ubuntu-condensed;
+    background: $blue;
+    border-radius: 0;
+    position: relative;
+    &:before{
+        content: '';
+        position: absolute;
+        top: 8px;
+        width: 13px;
+        height: 15px;
+        background: url(../images/arrow.png) no-repeat 0 0;
+    }
+}
+
+.portfolio__link-page_prev{
+    border-radius: 3px 0 0 3px;
+    padding-right: 4px;
+    text-align: right;
+    &:before{
+        left: 10px;
+        transform: rotate(90deg);
+    }
+}
+
+.portfolio__link-page_next{
+    border-radius: 0 3px 3px 0;
+    padding-left: 4px;
+    text-align: left;
+    &:before{
+        left: auto;
+        right: 10px;
+        transform: rotate(-90deg);
+    }
+}

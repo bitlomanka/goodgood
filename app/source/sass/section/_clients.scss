@@ -1,0 +1,39 @@
+.clients-list{
+    @extend %letter-spacing;
+    margin: 0 0 28px -1%;
+    @include media("max-width: 960px") {
+        margin: 0;
+    }
+}
+
+.clients__item{
+    @extend %inline-block;
+    width: getColumnWidth(100%, 6, 1%);
+    height: 30px;
+    margin: 0 0 0 1%;
+    @include media("max-width: 960px") {
+        width: getColumnWidth(100%, 3, 6%);
+        margin: 0 0 30px 6%;
+    }
+    @include media("max-width: 700px") {
+        width: getColumnWidth(100%, 2, 10%);
+        margin: 0 0 30px 10%;
+    }
+    @include media("max-width: 480px") {
+        width: getColumnWidth(100%, 2, 2%);
+        margin: 0 0 30px 2%;
+    }
+}
+
+$clients-spacing: 20px;
+$clients-layout: horisontal;
+
+@import "clients/*.png";
+
+$bg-item-list: ('clients-1', 'clients-2', 'clients-3', 'clients-4', 'clients-5', 'clients-6');
+@each $bg in $bg-item-list {
+    $i: index($bg-item-list, $bg);
+    .clients__item_bg-#{$i}{
+        @include clients-sprite($bg);
+    }
+};

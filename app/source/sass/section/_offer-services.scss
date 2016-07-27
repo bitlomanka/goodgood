@@ -1,0 +1,66 @@
+.offer-services__title{
+    font: 400 69px $bebas_neueregular;
+    color: $color;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0 0 40px;
+}
+
+.offer-services__border{
+    border-top: 2px solid #d7d7d7;
+    border-bottom: 3px solid #a5a5a5;
+    margin: 0 0 70px;
+}
+
+.offer-services__list{
+    @extend %letter-spacing;
+    border-right: 1px solid #d7d7d7;
+    box-sizing: border-box;
+}
+
+.offer-services__item{
+    @extend %inline-block;
+    width: getColumnWidth(100%, 4, 0);
+    border-left: 1px solid #d7d7d7;
+    box-sizing: border-box;
+    padding: 2%;
+    @include media("max-width: 960px") {
+        border-bottom: 1px solid #d7d7d7;
+        width: getColumnWidth(100%, 2, 0);
+        text-align: center;
+    }
+}
+
+.offer-services__bg{
+    width: 100%;
+    height: 105px;
+    margin: 0 0 15px;
+}
+
+.offer-services__block-title{
+    font: 400 20px $bree-serif;
+    color: $blue;
+    text-align: center;
+    margin: 0 0 15px;
+}
+
+.offer-services__desktiption{
+    font: 400 13px/16px $font-ubuntu;
+    color: $color;
+}
+
+.offer-services__bg_1{
+    background: url(../images/about-us-bg/offer-services-bg-1.png) no-repeat center bottom;
+}
+
+.offer-services__bg_2{
+    background: url(../images/about-us-bg/offer-services-bg-2.png) no-repeat center bottom;
+}
+
+.offer-services__bg_3{
+    background: url(../images/about-us-bg/offer-services-bg-3.png) no-repeat center bottom;
+}
+
+.offer-services__bg_4{
+    background: url(../images/about-us-bg/offer-services-bg-4.png) no-repeat center bottom;
+}

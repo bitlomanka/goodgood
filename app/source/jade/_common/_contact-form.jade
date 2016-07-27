@@ -1,0 +1,61 @@
+.contact-form__container
+    .contact-form__fill Lorem ipsum dolor sit amet, consectetur 
+        span.necessarily &#42; 
+        | sign amentu kurmanci.
+    form(action="javascript:void(null);" method="POST").contact-form
+        .contact__container-label
+            label(for="name").contact__label name 
+            span.necessarily &#42; 
+        .contact__input-container
+            input(type="text" name="name" id="name").contact__input
+        .contact__container-label
+            label(for="email").contact__label E-MAIL ADDRESS
+            span.necessarily &#42; 
+        .contact__input-container
+            input(type="text" name="email" id="email").contact__input
+        .contact__container-label
+            label(for="subject").contact__label SUBJECT
+            span.necessarily &#42; 
+        .contact__input-container
+            input(type="text" name="subject" id="subject").contact__input
+        .contact__container-label
+            label(for="message").contact__label MESSAGE 
+            span.necessarily &#42;
+        .contact__input-container
+            textarea(name="message")#message.contact__textarea
+        .contact__container-captcha
+            .captcha__block
+            .captcha__container-entry
+                .contact__container-label
+                    label(for="captcha-entry").contact__label.contact__label_captcha Enter the code
+                .contact__input-container
+                    input(type="text" name="captcha" id="captcha-entry").contact__input.contact__input_captcha
+                input(type="submit" value="Send").contact__submit
+.contact-info__container
+    ul.contact__list
+        li.contact__item
+            .contact-icons.contact-icons-1
+            .contact__block-right
+                a(href="tel:10001234567").contact__block
+                    span.blue Office: 
+                    | +1 (000) 123-4567
+                a(href="tel:10001234567").contact__block
+                    span.blue Mobil: 
+                    | +1 (000) 123-4567
+        li.contact__item
+            .contact-icons.contact-icons-4
+            .contact__block-right Lorem ipsum dolar sit amet New York- United States
+        li.contact__item
+            .contact-icons.contact-icons-3
+            .contact__block-right
+                a(href="mailto:hakan.ertann@gmail.com").contact__block
+                    span.blue hakan.ertann@gmail.com
+                a(href="#").contact__block
+                    span.blue www.hakan-ertan.com
+    #map.contact__container-map
+    .social__title FOLLOW US ON SOCIAL MEDIA
+    ul.social__list
+        - var social = ['twitter', 'facebook', 'youtube', 'vimeo', 'linkedin', 'google']
+            each item in social
+                li.social__item
+                    a(href="#" class="social__link_#{item}" target="_blank").social__link= item

@@ -1,0 +1,17 @@
+extends ../main
+block title
+    - var title = 'Portfolio'
+    | portfolio
+block content
+    main.content
+        .background-top
+            .slider__block-text
+                h1.slider__title_page.slider__title PORTFOLIO
+        .container
+            h2.title__page TASTE IT THE GOOD PROJECTS
+        include ../_common/_filter-menu
+        include ../_common/_portfolio-page
+        include ../_common/_clients
+        .container
+            include ../_common/_reviews
+            

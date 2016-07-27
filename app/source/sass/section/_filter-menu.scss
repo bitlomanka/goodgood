@@ -1,0 +1,163 @@
+.border{
+    width: 100%;
+    border-top: 1px solid #b3d5e4;
+    border-bottom: 1px solid #b3d5e4;
+    margin: 0 0 35px;
+}
+
+.filter-menu__container-width{
+    max-width: 1022px;
+    margin: 0 auto;
+    @extend %clearfix;
+    text-align: center;
+    border-right: 1px solid #b3d5e4;
+    border-left: 1px solid #b3d5e4;
+    @extend %letter-spacing;
+}
+
+.filter-menu__list{
+    @extend %inline-block;
+    @include media("max-width: 700px") {
+        border-bottom: 1px solid #b3d5e4;
+    }
+}
+
+.filter-menu__item{
+    @extend %inline-block;
+    &:first-child{
+        .filter-menu__link{
+            &:before{
+                border: none;
+            }
+        }
+    }
+}
+
+.filter-menu__link{
+    text-transform: uppercase;
+    display: block;
+    color: $color;
+    font: 16px $ubuntu-condensed;
+    padding: 18px 38px;
+    position: relative;
+    @include media("max-width: 960px") {
+        padding: 18px 14px;
+    }
+    &:before{
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        margin-top: -13px;
+        width: 0;
+        height: 25px;
+        border-left: 1px solid #c3c4c4;
+        @include media("max-width: 480px") {
+            display: none;
+        }
+    }
+}
+
+.category__container{
+    @extend %inline-block;
+    width: 15%;
+    box-sizing: border-box;
+    padding: 16px 0 15px 15px;
+    text-align: left;
+    font: 20px $ubuntu-condensed;
+    color: #fff;
+    background: $blue url(../images/arrow.png) no-repeat 112px center;
+    position: relative;
+    cursor: pointer;
+    @include media("max-width: 960px") {
+        width: 18%;
+    }
+    @include media("max-width: 700px") {
+        width: 30%;
+    }
+    @include media("max-width: 480px") {
+        width: 45%;
+    }
+}
+
+.category__list{
+    position: absolute;
+    top: 56px;
+    left: 0;
+    z-index: 6;
+    width: 100%;
+    padding: 0 7px;
+    box-sizing: border-box;
+    background: $color-orange;
+    display: none;
+}
+
+.category__item{
+    border-top: 1px solid #f9f5d2;
+    &:first-child{
+        border: none;
+    }
+}
+
+.category__link{
+    display: block;
+    padding: 9px 11px;
+    color: #f9f5d2;
+    font: 500 13px $font-ubuntu;
+    position: relative;
+    &:after{
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 10px;
+        height: 10px;
+        margin: -5px 0 0 0;
+        background: #f9f5d2;
+        border-radius: 50%;
+    }
+    &:hover{
+        &:after{
+            background: $blue;
+        }
+    }
+}
+
+.view__container{
+    @extend %inline-block;
+    height: 33px;
+    margin: 17px 0 0 2%;
+    @include media("max-width: 700px") {
+        margin-left: 5%;
+    }
+}
+
+.view{
+    width: 24px;
+    height: 23px;
+    @extend %inline-block;
+    cursor: pointer;
+    overflow: hidden;
+    margin: 0 0 0 9px;
+    &:first-child{
+        margin: 0;
+    }
+}
+
+@import "view/*.png";
+
+.view_1{
+    @include view-sprite(view-1)
+}
+
+.view_2{
+    @include view-sprite(view-2)
+}
+
+.view_1-active{
+    @include view-sprite(view-1-active)
+}
+
+.view_2-active{
+    @include view-sprite(view-2-active)
+}

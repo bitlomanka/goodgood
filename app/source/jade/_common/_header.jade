@@ -1,16 +1,15 @@
+block vars
 .container
     header.header
-        .container-logo
+        a(href="/").container-logo
             img(src="images/logo.png", alt="").logo
         nav.navigation-container
             .mobile-navigation
-            mixin nav(active)
-                - var menu = ['Home', 'Portfolio', 'About', 'Contact', 'Blog']
-                ul.navigation__list
-                    each item in menu
-                        li(href="#" class="navigation__item" + (active == item ? ' navigation__item_active' : ''))
-                            a(href="#").navigation__link= item
-            mixin nav('Home')
+            - var menu = {'Home': '/', 'Portfolio': '/portfolio.html', 'About': '/about.html', 'Contact': '/contact.html', 'Blog': ''};
+            ul.navigation__list
+                each val, key in menu
+                        li(class='navigation__item' + (title == key ? ' navigation__item_active' : ''))
+                            a(href=val).navigation__link= key
         form(action="").container-search
             input(type="search", name="search", placeholder="Search").search__field
             input(type="submit" value="").search__icon

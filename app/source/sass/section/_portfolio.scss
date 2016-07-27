@@ -59,6 +59,8 @@
 
 .portfolio__container-img{
     padding: 76.3% 0 0 0;
+    overflow: hidden;
+    position: relative;
 }
 
 .portfolio__img{
@@ -73,9 +75,13 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    z-index: 3;
+    z-index: 5;
+    width: 90%;
     transform: translate(-50%, -50%);
     display: none;
+    @include media("max-width: 700px") {
+        display: block;
+    }
 }
 
 .portfolio__container-details{
@@ -85,6 +91,7 @@
     border-radius: 6px;
     padding: 8px 15px;
     text-align: center;
+    margin: 0 auto;
 }
 
 .portfolio__details{

@@ -99,7 +99,7 @@
     height: auto;
 }
 
-.footer__contact-icons{
+.contact-icons{
     float: left;
     width: 35px;
     height: 37px;
@@ -108,16 +108,16 @@
 
 $contact-spacing: 10px;
 
-@import "footer-icons/*.png";
+@import "contact-icons/*.png";
 
-.footer__contact-icons-1{
-    @include footer-icons-sprite(phone-1)
+.contact-icons-1{
+    @include contact-icons-sprite(phone-1)
 }
 
-.footer__contact-icons-2{
-    @include footer-icons-sprite(phone-2)
+.contact-icons-2{
+    @include contact-icons-sprite(phone-2)
 }
 
-.footer__contact-icons-3{
-    @include footer-icons-sprite(mail)
+.contact-icons-3{
+    @include contact-icons-sprite(mail)
 }
