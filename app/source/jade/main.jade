@@ -1,32 +1,33 @@
 doctype html
 html
-  head(lang="ru")
-    title
-        block title
-    meta(name="viewport", content="width=device-width, initial-scale=1")
-    meta(http-equiv="content-type", content="text/html; charset=UTF-8")
-    meta(name="description", content="")
-    meta(name="keywords", content="")
-    link(rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon")
-    //build:css css/bundle.min.css
-    link(href="bower/normalize-css/normalize.css" rel="stylesheet")
-    link(rel="stylesheet", href="fonts/stylesheet.css")
-    link(href='https://fonts.googleapis.com/css?family=Ubuntu+Condensed', rel='stylesheet', type='text/css')
-    link(href='https://fonts.googleapis.com/css?family=Bree+Serif', rel='stylesheet', type='text/css')
-    link(href='https://fonts.googleapis.com/css?family=Ubuntu:400,700', rel='stylesheet', type='text/css')
-    link(rel="stylesheet", href="bower/OwlCarousel/owl-carousel/owl.carousel.css")
-    link(rel="stylesheet", href="css/style.css")
-    //endbuild
+    head(lang="ru")
+        title
+            block title
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+        meta(http-equiv="content-type", content="text/html; charset=UTF-8")
+        meta(name="description", content="")
+        meta(name="keywords", content="")
+        link(rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon")
+        //build:css css/bundle.min.css
+        link(href="bower/normalize-css/normalize.css" rel="stylesheet")
+        link(rel="stylesheet", href="fonts/stylesheet.css")
+        link(rel="stylesheet", href="bower/OwlCarousel/owl-carousel/owl.carousel.css")
+        link(rel="stylesheet", href="css/style.css")
+        //endbuild
+        link(href='https://fonts.googleapis.com/css?family=Ubuntu+Condensed', rel='stylesheet', type='text/css')
+        link(href='https://fonts.googleapis.com/css?family=Bree+Serif', rel='stylesheet', type='text/css')
+        link(href='https://fonts.googleapis.com/css?family=Ubuntu:400,700', rel='stylesheet', type='text/css')
     body
         .wrapper
             include _common/_header
             .container
             block content
             include _common/_footer
-    //build:js js/main.js
-    script(src="bower/jquery/dist/jquery.min.js")
-    script(src="bower/OwlCarousel/owl-carousel/owl.carousel.js")
-    script(src="bower/jquery-validation/dist/jquery.validate.js")
-    script(src="js/main.js")
-    //endbuild
-    script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPxvOGsb1NK8RZnbTTWAELrXdFEeDqBDk&callback=initMap")
+        //build:js js/main.js
+        script(src="bower/jquery/dist/jquery.min.js")
+        script(src="bower/OwlCarousel/owl-carousel/owl.carousel.js")
+        script(src="bower/jquery-validation/dist/jquery.validate.js")
+        script(src="bower/jquery-placeholder/jquery.placeholder.js")
+        script(src="js/main.js")
+        //endbuild
+        script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPxvOGsb1NK8RZnbTTWAELrXdFEeDqBDk&callback=initMap")

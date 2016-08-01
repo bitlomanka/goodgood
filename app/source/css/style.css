@@ -44,7 +44,7 @@ img {
   display: block;
 }
 
-input[submit] {
+input {
   border: none;
 }
 
@@ -226,6 +226,7 @@ html, body {
   color: #515862;
   padding: 5px 19px;
   border-radius: 3px;
+  font: 400 14px "Ubuntu";
 }
 .navigation__link:hover {
   background: #f98561;
@@ -239,7 +240,6 @@ html, body {
 
 .navigation__item_active {
   background: #12a3d6;
-  font: 700 14px "Ubuntu";
   border-bottom: 11px solid #0080b7;
   position: relative;
 }
@@ -262,6 +262,7 @@ html, body {
 }
 .navigation__item_active .navigation__link {
   color: #fff;
+  font: 700 14px "Ubuntu";
 }
 .navigation__item_active .navigation__link:hover {
   background: none;
@@ -303,6 +304,7 @@ html, body {
   background: none;
   border: none;
   color: #515862;
+  height: 39px;
 }
 .search__field:focus {
   outline: none;
@@ -500,7 +502,7 @@ html, body {
 }
 
 .services-icon-sprite, .services__icon_1, .services__icon_2, .services__icon_3, .services__icon_4 {
-  background-image: url('../images/services-icon-s0f81c5d800.png');
+  background-image: url('../images/services-icon-s1101cb67ef.png');
   background-repeat: no-repeat;
 }
 
@@ -857,7 +859,7 @@ html, body {
 }
 
 .ava-icons-sprite, .reviews-avatar__bg-1, .reviews-avatar__bg-2 {
-  background-image: url('../images/ava-icons-s5e3da431b3.png');
+  background-image: url('../images/ava-icons-s4586467a3e.png');
   background-repeat: no-repeat;
 }
 
@@ -898,7 +900,7 @@ html, body {
   text-transform: uppercase;
   display: block;
   color: #515862;
-  font: 16px "Ubuntu Condensed";
+  font: 16px 'Ubuntu Condensed';
   padding: 18px 38px;
   position: relative;
 }
@@ -1013,7 +1015,7 @@ html, body {
 }
 
 .view-sprite, .view_1, .view_2, .view_1-active, .view_2-active {
-  background-image: url('../images/view-sfb9643f091.png');
+  background-image: url('../images/view-sbde1dac37e.png');
   background-repeat: no-repeat;
 }
 
@@ -1183,7 +1185,7 @@ html, body {
 }
 
 .clients-sprite, .clients__item_bg-1, .clients__item_bg-2, .clients__item_bg-3, .clients__item_bg-4, .clients__item_bg-5, .clients__item_bg-6 {
-  background-image: url('../images/clients-sd6e78f5517.png');
+  background-image: url('../images/clients-s6797e63b27.png');
   background-repeat: no-repeat;
 }
 
@@ -1439,7 +1441,7 @@ label.error:after {
 }
 
 .contact-icons-sprite, .contact-icons-4, .contact-icons-1, .contact-icons-2, .contact-icons-3 {
-  background-image: url('../images/contact-icons-s2002651a4e.png');
+  background-image: url('../images/contact-icons-s9619df0d46.png');
   background-repeat: no-repeat;
 }
 
@@ -1504,7 +1506,7 @@ label.error:after {
 }
 
 .socials-sprite, .social__link_twitter, .social__link_facebook, .social__link_youtube, .social__link_vimeo, .social__link_linkedin, .social__link_google {
-  background-image: url('../images/socials-se81a14dde6.png');
+  background-image: url('../images/socials-sd04eaea427.png');
   background-repeat: no-repeat;
 }
 
@@ -1770,6 +1772,10 @@ label.error:after {
 .footer__publication-date {
   color: #a3afb2;
   margin: 0 0 5px;
+}
+
+.mail-container {
+  position: relative;
 }
 
 .mail__label {

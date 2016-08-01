@@ -105,6 +105,7 @@
     color: $color;
     padding: 5px 19px;
     border-radius: 3px;
+    font: 400 14px $font-ubuntu;
     &:hover{
         background: #f98561;
         color: #fff;
@@ -116,7 +117,6 @@
 
 .navigation__item_active{
     background: #12a3d6;
-    font: 700 14px $font-ubuntu;
     border-bottom: 11px solid #0080b7;
     position: relative;
     &:before{
@@ -135,7 +135,8 @@
         }
     }
     .navigation__link{
-       color: #fff;
+        color: #fff;
+        font: 700 14px $font-ubuntu;
         &:hover{
             background: none;
         }
@@ -173,6 +174,7 @@
     background: none;
     border: none;
     color: $color;
+    height: 39px;
     &:focus{
         outline: none;
         border-bottom: 1px solid $blue;

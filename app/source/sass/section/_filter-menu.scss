@@ -37,7 +37,7 @@
     text-transform: uppercase;
     display: block;
     color: $color;
-    font: 16px $ubuntu-condensed;
+    font: 16px 'Ubuntu Condensed';
     padding: 18px 38px;
     position: relative;
     @include media("max-width: 960px") {

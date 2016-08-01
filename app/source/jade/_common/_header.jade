@@ -10,6 +10,6 @@ block vars
                 each val, key in menu
                         li(class='navigation__item' + (title == key ? ' navigation__item_active' : ''))
                             a(href=val).navigation__link= key
-        form(action="").container-search
+        form(action="" method="POST").container-search
             input(type="search", name="search", placeholder="Search").search__field
             input(type="submit" value="").search__icon

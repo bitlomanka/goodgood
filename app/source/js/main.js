@@ -97,15 +97,15 @@ $(document).ready(function(){
             captcha: 'required'
         },
         messages:{
-            first_user_name:{
+            name:{
                 required: 'Enter your name',
                 minlength: 'Name must be at least 2 characters'
             },
-            email_user:{
+            email:{
                 required:'Enter your e-mail address',
                 email: 'Please enter a valid e-mail address'
             },
-            last_user_name:{
+            subject:{
                 required: 'Enter subject message',
                 minlength: 'Subject message must be at least 5 characters'
             },
@@ -124,6 +124,34 @@ $(document).ready(function(){
             })
         }
     });
+    
+    $('.mail-container').validate({
+        rules: {
+            mail_subscription:{
+                required:true,
+                email: true
+            }
+        },
+        messages:{
+            mail_subscription:{
+                required:'Enter your e-mail address',
+                email: 'Please enter a valid e-mail address'
+            }
+        },
+        submitHandler: function(form){
+            $.ajax({
+                type: "POST",
+                url: 'php/subscription.php',
+                data: $(form).serialize(),
+                cache: false,
+                success: function(data){
+                    alert(data);
+                }
+            })
+        }
+    });
+    
+    $('input, textarea').placeholder();
     
 });
 

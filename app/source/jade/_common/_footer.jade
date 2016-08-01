@@ -21,10 +21,10 @@ footer.footer
                     .footer__publication-text
                         | Lorem ipsum dolor sit amet, consectetur adip iscing elit. Ut ultricies sagittis magna a comm. Ut eget eros mauris, ut cursus urna.
                     .footer__publication-container
-                        form(action="").mail-container
+                        form(action="javascript:void(null);" method="POST").mail-container
                             label(for="mail").mail__label Your Email Address
-                            input(type="text", id="mail", name="mail" ).mail__field
-                            input(type="submit" value="Sign Up").services__link_type-2
+                            input(type="text", id="mail", name="mail_subscription" ).mail__field
+                            input(type="submit" value="Sign Up" name="submit_subscription" ).services__link_type-2
             li.footer__item
                 .footer__title recent projects
                 .footer__publication-container.footer__publication-container_border-none
